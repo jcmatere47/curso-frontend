@@ -1,0 +1,116 @@
+/* Arquivo CSS geral com estilos dos elementos de todas as páginas*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+}
+
+body {
+  background-color: white;
+}
+
+h1, h2, p, li {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #454545;
+	margin-bottom: 1rem;
+}
+
+.navegacao {
+	color: #66f;
+}
+
+a {
+	color: #777;
+	padding: 20px;
+	text-decoration: none;
+}
+
+form div {
+	background: #fff;
+	border-right: 1px solid #228b22;
+	border-left: 1px solid #228b22;
+	border-top: 1px solid #228b22;
+	border-bottom: 1px solid #228b22;
+	margin: 10px 10px 20px 10px;
+	padding: 20px;
+	overflow: hidden;
+}
+
+label {
+	position: relative;
+	margin-bottom: 1rem;
+	font-size: 1rem;
+	font-family: sans-serif;
+	font-weight: bold;
+	color: #66f;
+}
+
+input {
+	padding: 1rem;
+}
+
+
+[type="text"] [type="email"], textarea, label {
+	display: block;
+	width: 100%;
+}
+
+
+header {
+  background-color: #00BFFF;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+
+nav {
+  float: left;
+  width: 20%;
+	border-right: 1px solid;
+	border-left: 1px solid;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+  background: #00BFFF;
+  padding: 20px;
+}
+
+
+nav ul {
+  padding: 30px;
+}
+
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  color: MediumSeaGreen ;
+}
+
+
+section::after {
+  background: #ccc;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: MediumSeaGreen ;
+}
+
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}

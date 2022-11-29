@@ -1,0 +1,60 @@
+
+
+table {
+
+	border: 1px solid;
+	background: #ffffff;
+	width: 100%;
+	border-collapse: collapse;
+
+}
+
+table tr {
+	border: 1px solid lightgrey;
+}
+
+table tbody tr:nth-child(even) {
+}
+
+table tbody tr:hover {
+	background-color: lightgrey;
+}
+
+table th,
+table td {
+	border: 1px solid black;
+	padding: 1rem;
+	font-size: 1rem;
+	text-align: left;
+	vertical-align: middle;
+}
+
+table tr td:first-child {
+	text-align: left;
+	font-weight: bold;
+}
+
+table th {
+	color: black
+	;
+	background-color: green;
+}
+
+.table-container {
+	padding: 2rem 1rem;
+}
+
+.table-container h3 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: black;
+}
+
+.table-container tfoot {
+	background: #EEEEEE;
+}
+
+.table-container tfoot td {
+	font-weight: bold;
+	color: black;
+}

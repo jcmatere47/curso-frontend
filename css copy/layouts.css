@@ -1,0 +1,155 @@
+
+
+
+
+
+
+  html {
+      margin: 0;
+      padding: 0;
+  }
+  
+  body {
+      background-color: white;
+  }
+  
+  h1 {
+      font-size: 2rem;
+  }
+  
+  h3 {
+      font-size: 1.8rem;
+  }
+
+  li {
+    font-size: 1.1rem;
+  }
+  
+  form {
+      background: #eee;
+      padding: 10px;
+  }
+  
+
+  
+  label {
+      margin-bottom: 1rem;
+      font-size: 1.4rem; 
+      font-family: sans-serif;
+      font-weight: bold;
+      color: #66F;
+  }
+  
+
+  
+  [type="text"], [type="email"], textarea, label {
+      display: block;
+      width: 100%;
+  }
+  
+  header {
+    background-color: #333;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+  
+  nav {
+    float: left;
+    width: 10%;
+    padding: 20px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 10px;
+  }
+  
+
+  
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  footer {
+    background-color: grey;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    padding: 10px;
+  }
+
+
+  img {
+    padding: 1rem;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+
+  .coluna {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    text-align: auto;
+  }
+  
+  div {
+    text-align: center;
+  }
+  
+  iframe {
+    width: 100%;
+  }
+
+  .filtro:hover {
+
+    filter: blur(5px)
+  }
+
+
+
+
+@media (min-width:426px) {
+
+   body{background-color: rgb(196, 196, 223);
+
+   } 
+
+    div {
+        width:100%;
+
+    }
+
+    nav {
+        width: 30vw;
+    }
+
+    .coluna {
+        width:60vw;
+        min-width: unset;
+    }
+
+
+}
+
+
+
+
+  @media (max-width: 425px) {
+    body {
+        background-color: aquamarine;
+    }
+
+    nav, 
+    article,
+    .coluna {
+      width: 100%;
+      min-width: 320px;
+    }
+  }
