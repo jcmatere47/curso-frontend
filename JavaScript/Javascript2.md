@@ -85,3 +85,59 @@ if (cor == "preto") {
      default :
         console.log('não temos a cor desejada');
  }
+
+## Cálculo média do aluno
+...
+
+var nota1 = 10;
+var nota2 = 8;
+var nota3 = 9;
+var nota4 = 7;
+var media =(nota1 + nota2 + nota3 + nota4) / 4;
+if(media >= 8) {
+    console.log("Aluno Aprovado")
+} else {
+    console.log("Aluno em recuperação")
+}
+
+## Laços de repetição
+
+...
+// fazer a revisão do carro aos 10km
+var km;
+var revisao = 10;
+
+for(km = 0; km < revisao; km++){
+    console.log("Pode rodar")
+}
+
+### Cálculo de média de alunos
+var alunos = [
+    [6, 7, 8, 6],
+    [8, 5, 6, 8],
+    [10, 6, 8, 7],
+    [6, 6, 6, 6, 6]
+
+]
+var nota = 0;
+for (var i = 0; i < alunos.length; i++){
+
+    nota = 0
+    notasAluno = alunos[i]
+    console.log("Aluno: " + parseInt(i+1));
+    console.log("Notas: " + notasAluno);
+
+    for (c = 0; c < notasAluno.length; c++){
+        nota += notasAluno[c];
+    }
+
+    media = nota / 4;
+
+    if(media >= 7){
+        resultado = "Aprovado!";
+    } else {
+        resultado = "Reprovado";
+    }
+
+    console.log("Media: " + media " - " + resultado);
+}
