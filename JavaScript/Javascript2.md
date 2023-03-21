@@ -141,3 +141,25 @@ for (var i = 0; i < alunos.length; i++){
 
     console.log("Media: " + media " - " + resultado);
 }
+
+## Funções
+- Evitar repetição de código 
+- Realizar chamadas dinâmicas de algoritmos
+
+function calculoMedia ( notas ) {
+
+    var soma = 0;
+    for( c = 0; c < Notas.length; c++) {
+        soma += notas[c];
+        
+    }
+
+    media = soma / notas.length; // Recebe o tamanho das notas inseridas
+
+    return media;
+}
+
+console.log("Média: " + calculoMedia([8, 8]))
+
+
+## Funções Recursivas
