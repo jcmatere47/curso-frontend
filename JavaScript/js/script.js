@@ -78,11 +78,11 @@ function validaCampo(elemento){
         event.preventDefault();
 
             if(this.value == ""){
-                document.querySelector(mensagem).innerHTML = "verifique o preenchimento dos campos em vermelho"
+                document.querySelector('.mensagem').innerHTML = "verifique o preenchimento dos campos em vermelho"
                 this.classlist.add('erro');
                 return false;
             } else {
-                document.querySelector(mensagem).innerHTML ="";
+                document.querySelector('.mensagem').innerHTML ="";
                 this.classlist.remove('erro');
             }
 
@@ -98,10 +98,10 @@ function validaCampoNumerico(elemento){
         event.preventDefault();
 
             if(this.value.match(/[0-9]*/) && this.value >= 0 && this.value <= 10){
-                document.querySelector(mensagem).innerHTML = ""
+                document.querySelector('.mensagem').innerHTML = ""
                 this.classlist.remove('erro');
             } else {       
-                document.querySelector(mensagem).innerHTML ="verifique o preenchimento dos campos em destaque";
+                document.querySelector('.mensagem').innerHTML ="verifique o preenchimento dos campos em destaque";
                 this.classlist.add('erro');
                 return false; 
             }        
