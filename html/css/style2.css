@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: auto;
     padding: 0;
 }
 
@@ -50,6 +50,10 @@ button {
 
 button:hover {
     background-color: #4545c2;
+}
+
+#mensagem {
+    font-size: 10rem;
 }
 
 #mensagem,

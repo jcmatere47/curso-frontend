@@ -41,10 +41,17 @@ function contagemRegressiva(numero) {
 }
 
 // contagem regressiva(50);
-document.getElementById('formulario-01').addEventListener('submit', function ( evento ) {
+const formulario1 = document.getElementById('formulario-01')
+
+if(formulario1)
+formulario1.addEventListener('submit', function ( evento ) {
 
     evento.preventDefault();
     evento.stopPropagation();
+
+    if ( this.getAttribute('class').match(/erro/)) {
+        return false;
+    }
 
     let dados = new FormData(this);
 
@@ -79,11 +86,13 @@ function validaCampo(elemento){
 
             if(this.value == ""){
                 document.querySelector('.mensagem').innerHTML = "verifique o preenchimento dos campos em vermelho"
-                this.classlist.add('erro');
+                this.classList.add('erro');
+                this.parentNode.classList.add('erro');
                 return false;
             } else {
                 document.querySelector('.mensagem').innerHTML ="";
-                this.classlist.remove('erro');
+                this.classList.remove('erro');
+                this.parentNode.classList.remove('erro');
             }
 
     });
@@ -97,22 +106,70 @@ function validaCampoNumerico(elemento){
 
         event.preventDefault();
 
-            if(this.value.match(/[0-9]*/) && this.value >= 0 && this.value <= 10){
-                document.querySelector('.mensagem').innerHTML = ""
-                this.classlist.remove('erro');
-            } else {       
-                document.querySelector('.mensagem').innerHTML ="verifique o preenchimento dos campos em destaque";
-                this.classlist.add('erro');
-                return false; 
-            }        
+        let cepValido = /^\d{5}-\d{3}$/;
+
+        if(this.value.match(cepValido)){
+            document.querySelector('.mensagem').innerHTML = "";
+            this.classList.remove('erro');
+            this.parentNode.classList.remove('erro');
+        } else {       
+            document.querySelector('.mensagem').innerHTML ="verifique o preenchimento dos campos em destaque";
+            this.classList.add('erro');
+            this.parentNode.classList.add('erro');
+            return false; 
+        }        
 
     });
 
-
 }
 
+
+function validaEmail(elemento) {
+    elemento.addEventListener('focusout', function(event) {
+
+        event.preventDefault();
+
+        const emailValido = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(this.value.match(emailValido)) {
+            document.querySelector('.mensagem').innerHTML = ""
+            this.classList.remove('erro');
+            this.parentNode.classList.remove('erro');
+        } else {       
+            document.querySelector('.mensagem').innerHTML ="verifique o preenchimento dos campos em destaque";
+            this.classList.add('erro');
+            this.parentNode.classList.add('erro');
+            return false; 
+        }        
+
+    });
+
+}    
+
+function validaUf(elemento) {
+    elemento.addEventListener("focusout", function (event) {
+      event.preventDefault();
+  
+      const ufValida = /^(AC|AL|AP|AM|BA|CE|DF|ES|GO|MA|MT|MS|MG|PA|PB|PR|PE|PI|RJ|RN|RS|RO|RR|SC|SP|SE|TO)$/;
+  
+      if (this.value.match(ufValida)) {
+        document.querySelector(".mensagem").innerHTML = "";
+        this.classList.remove("erro");
+        this.parentNode.classList.remove("erro");
+      } else {
+        document.querySelector(".mensagem").innerHTML =
+          "verifique o preenchimento dos campos em destaque";
+        this.classList.add("erro");
+        this.parentNode.classList.add("erro");
+        return false;
+      }
+    });
+  }
+
+
 let camposObrigatorios = document.querySelectorAll('input.obrigatorio');
-let camposNumericos = document.querySelectorAll('input.numero');
+let camposNumericos = document.querySelectorAll('input.obrigatorioNumero');
+let camposEmail = document.querySelectorAll('input.email');
+let camposUF = document.querySelectorAll("input.obrigatorioUF");
 
 for ( let emFoco of camposObrigatorios) {
     validaCampo(emFoco);
@@ -120,3 +177,12 @@ for ( let emFoco of camposObrigatorios) {
 for ( let emFoco of camposNumericos) {
     validaCampoNumerico(emFoco);
 }
+
+for ( let emFoco of camposEmail) {
+    validaEmail(emFoco);
+}
+
+for ( let emFoco of camposUF) {
+    validaUf(emFoco);
+}
+     
