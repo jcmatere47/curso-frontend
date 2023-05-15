@@ -1,0 +1,21 @@
+.section {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+}
+
+input,
+textarea {
+    margin: 2px;
+    width: 600px;
+}
+
+.card {
+    width: 30.5%;
+    float: left ;
+    margin: 5px;
+
+}
+
+.card-title {
+    font-weight: bold;
+}
