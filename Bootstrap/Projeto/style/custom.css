@@ -1,3 +1,4 @@
+
 .section {
     padding-bottom: 4rem;
     padding-top: 4rem;
@@ -11,11 +12,30 @@ textarea {
 
 .card {
     width: 30.5%;
-    float: left ;
+    float: left;
     margin: 5px;
-
+    max-width: 300px;
 }
 
 .card-title {
     font-weight: bold;
+}
+
+button {
+    position: relative;
+    margin: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border:solid;
+    background-color: red;
+    cursor: pointer;
+  }
+
+.close-hide {
+    display: none;
+}
+  
+.terceira-imagem {
+    max-width: 185px;
+    height: auto;
 }
