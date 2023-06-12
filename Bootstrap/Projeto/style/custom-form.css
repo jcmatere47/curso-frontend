@@ -1,0 +1,14 @@
+textarea.form-control {
+    width: 100% !important;
+}
+
+.form-check {
+    display:flex;
+    align-items:initial;
+    bottom: 5px;
+}
+
+.form-check2 {
+    display: inline-block;
+}
+

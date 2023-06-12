@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./bootstrap/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+
     <link rel="stylesheet" href="./style/custom.css">
 
     <title>JC CELULARES</title>
@@ -19,14 +21,14 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                   <h1></h1>
+                    <h1></h1>
                 </div>
                 <div class="col">
                     <ul class="nav justify-content-end">
                         <li class="nav-item"><a class="nav-link active" href="">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#Sobre">Sobre</a></li>
                         <li class="nav-item"><a class="nav-link" href="#Produtos">Produtos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contatos">Contatos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./cadastro.html">Contato</a></li>
                     </ul>
                 </div>
 
@@ -35,6 +37,32 @@
         </div>
     </header>
 
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="./imagens/iphone-12-finish-unselect-gallery-2-202207.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="./imagens/iphone-13-model-unselect-gallery-2-202207.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
     <section id="sobre">
         <div class="container">
@@ -65,8 +93,10 @@
 
                     <h2>Produtos </h2>
 
+
                     <div class="card">
-                        <img src="./imagens/iphone-12-finish-unselect-gallery-2-202207.jpg" alt="Iphone 12" class="img-fluid">
+                        <img src="./imagens/iphone-12-finish-unselect-gallery-2-202207.jpg" alt="Iphone 12"
+                            class="img-fluid">
                         <div class="card-body">
                             <h5 class="card-title">Iphone 12</h5>
                             <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel iste
@@ -77,24 +107,26 @@
                     </div>
 
                     <div class="card">
-                        <img src="./imagens/iphone-13-model-unselect-gallery-2-202207.jpg" alt="Imagem Exemplo" class="img-fluid">
+                        <img src="./imagens/iphone-13-model-unselect-gallery-2-202207.jpg" alt="Imagem Exemplo"
+                            class="img-fluid">
                         <div class="card-body">
                             <h5 class="card-title"> Iphone 13 </h5>
                             <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel iste
                                 sapiente quas saepe, rerum, quo ab enim ex corporis odit ratione repudiandae, distinctio
                                 qui nihil hic. Facilis placeat magnam id!</p>
-                                <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-2"> ver produto</a>
+                            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-2"> ver produto</a>
                         </div>
                     </div>
 
                     <div class="card">
-                        <img src="./imagens/iphone14-digitalmat-gallery-3-202209.png" alt="Imagem Exemplo" class="terceira-imagem">
+                        <img src="./imagens/iphone14-digitalmat-gallery-3-202209.png" alt="Imagem Exemplo"
+                            class="terceira-imagem">
                         <div class="card-body">
                             <h5 class="card-title">Iphone 14 </h5>
                             <p class="card-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel iste
                                 sapiente quas saepe, rerum, quo ab enim ex corporis odit ratione repudiandae, distinctio
                                 qui nihil hic. Facilis placeat magnam id!</p>
-                                <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-3"> ver produto</a>
+                            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-3"> ver produto</a>
                         </div>
                     </div>
 
@@ -150,10 +182,10 @@
                             <tr>
                                 <th>Capacidade</th>
                                 <th>Valor</th>
-                            </tr>  
+                            </tr>
                         </thead>
-                       <tbody>
-                                <tr>
+                        <tbody>
+                            <tr>
                                 <td>64 GB</td>
                                 <td>R$ 5.699</td>
                             </tr>
@@ -165,11 +197,11 @@
                                 <td>256 GB</td>
                                 <td>R$ 7.199</td>
                             </tr>
-                       </tbody>
-                   
+                        </tbody>
+
                     </table>
 
-                    
+
 
                 </div>
                 <div class="modal-footer">
@@ -196,10 +228,10 @@
                             <tr>
                                 <th>Capacidade</th>
                                 <th>Valor</th>
-                            </tr>  
+                            </tr>
                         </thead>
-                       <tbody>
-                                <tr>
+                        <tbody>
+                            <tr>
                                 <td>64 GB</td>
                                 <td>R$ 5.699</td>
                             </tr>
@@ -211,11 +243,11 @@
                                 <td>256 GB</td>
                                 <td>R$ 8.699</td>
                             </tr>
-                       </tbody>
-                   
+                        </tbody>
+
                     </table>
 
-                    
+
 
                 </div>
                 <div class="modal-footer">
@@ -242,10 +274,10 @@
                             <tr>
                                 <th>Capacidade</th>
                                 <th>Valor</th>
-                            </tr>  
+                            </tr>
                         </thead>
-                       <tbody>
-                                <tr>
+                        <tbody>
+                            <tr>
                                 <td>128 GB</td>
                                 <td>R$ 7.599</td>
                             </tr>
@@ -257,11 +289,11 @@
                                 <td>512 GB</td>
                                 <td>R$ 10.599</td>
                             </tr>
-                       </tbody>
-                   
+                        </tbody>
+
                     </table>
 
-                    
+
 
                 </div>
                 <div class="modal-footer">
@@ -273,9 +305,9 @@
     </div>
 
     <script src="./bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
 
-
-
+    </script>
 
 </body>
 

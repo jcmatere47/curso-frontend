@@ -1,13 +1,12 @@
-
-.section {
-    padding-bottom: 4rem;
-    padding-top: 4rem;
+* {
+    position: relative;
 }
+
 
 input,
 textarea {
-    margin: 2px;
-    width: 600px;
+    margin: 5px;
+    width: 100px;
 }
 
 .card {
@@ -38,4 +37,25 @@ button {
 .terceira-imagem {
     max-width: 185px;
     height: auto;
+}
+
+#estado {
+    top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    top: 3px;
+    margin-left: 3px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color:  	#98FB98;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
 }
