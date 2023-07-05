@@ -23,7 +23,18 @@ container {
 	justify-content: center;
 	align-items: center;
   }
+
   
+
+  a.nav-link.nav-modal-open {
+	position: relative;
+	left: 20px;
+	right: 20px;
+  }
+
+  li.nav-item {
+	margin-left: 200px;
+  }
 
 a.btn.btn-dark.stretch-link:hover {
 	transform: scale(1.2);
@@ -100,7 +111,7 @@ ul.navbar-nav.ml-auto {
 	transform: translateX(-50%);
 }
 .navbar-dark .navbar-nav .nav-item {
-	margin: 0px 15px;
+	margin: 0px 10px;
 }
 .navbar-dark .navbar-nav .nav-link {
 	text-transform: uppercase;
@@ -322,6 +333,7 @@ ul.navbar-nav.ml-auto {
 	color: #7a7a7a;
 	text-transform: uppercase;
 	transition: all 0.5s;
+	left: 0;
 }
 .footer .footer-menu a:hover {
 	color: #3a8bcd;
@@ -765,4 +777,12 @@ ul.navbar-nav.ml-auto {
 		text-align: left;
 	} 
 
+}
+
+.invalid {
+	border-color: #F00;
+}
+
+.text-muted {
+	display: none;
 }
