@@ -13,6 +13,37 @@ a {
 	text-decoration: none!important;
 }
 
+hr {
+	margin: 0.5rem 0;
+}
+
+container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+  
+
+  a.nav-link.nav-modal-open {
+	position: relative;
+	left: 20px;
+	right: 20px;
+  }
+
+  li.nav-item {
+	margin-left: 200px;
+  }
+
+a.btn.btn-dark.stretch-link:hover {
+	transform: scale(1.2);
+}
+
+ul.navbar-nav.ml-auto {
+	padding-top: 1em;
+}
+
 .copyright-text {
 	text-transform: uppercase;
 }
@@ -76,11 +107,11 @@ a {
 	z-index: 999;
 	position: absolute;
 	left: 50%;
-	top: 128px;
+	top: 105px;
 	transform: translateX(-50%);
 }
 .navbar-dark .navbar-nav .nav-item {
-	margin: 0px 15px;
+	margin: 0px 10px;
 }
 .navbar-dark .navbar-nav .nav-link {
 	text-transform: uppercase;
@@ -129,7 +160,15 @@ a {
 	background-repeat: no-repeat;
 	padding: 150px 0px;
 	background-position: center center;
+	opacity: 50%;
 }
+
+.banner:hover {
+	opacity: 100%;
+	transition: 2000ms;
+}
+
+
 .banner .caption {
 	background-color: rgba(250,250,250,0.9);
 	padding: 30px;
@@ -173,10 +212,10 @@ a {
 	font-weight: 700;
 	color: #1e1e1e;
 	margin-top: 15px;
-	transition: all 0.5s;
+	transition: all 1000ms;
 }
 .featured-item:hover h4 {
-	color: #3a8bcd;
+	color: #073c68;
 }
 .featured-item h6 {
 	color: #3a8bcd;
@@ -207,7 +246,7 @@ a {
 
 /* Subscribe Style */
 .subscribe-form {
-	background-color: #ff4901;
+	background-color: #3a8bcd;
 	padding: 80px 0px;
 	text-align: center;
 }
@@ -294,6 +333,7 @@ a {
 	color: #7a7a7a;
 	text-transform: uppercase;
 	transition: all 0.5s;
+	left: 0;
 }
 .footer .footer-menu a:hover {
 	color: #3a8bcd;
@@ -737,14 +777,6 @@ a {
 		text-align: left;
 	} 
 
-}
-
-::placeholder {
-	color: #fff
-}
-
-#email {
-	position: relative;
 }
 
 .invalid {
