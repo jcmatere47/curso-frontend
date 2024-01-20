@@ -1,45 +1,77 @@
 .blocks {
 
+    /*
+
+    BEM CSS
+    -BLOCK
+    -ELEMENT
+    -MODIFIER
+
+    - Padrão do objeto / Design Patterns
+
+    Exemplo: 
+    .cars__title
+    .cars__list
+    .cars__item
+
+    */
+
     padding: 3rem 0;
 
-    h2 {
+    &__title {
         color: $color-01;
     }
 
-    ul {
+    &__list {
         list-style-type: none;
         font-size: $font-small;
-        display: flex;
-        justify-content: space-between;
-        height: 250px;
+        display: block;
+        float: left;
+        margin: 0 auto;
+        height: $space-default auto;
         padding: 1rem 0;
         width: 100%;
     }
 
-    li {
+    &__item {
         color: $color-02;
         display: block;
         margin: $space-default auto;
-        width: 30%;
+        width: calc(99% / 3 - 15px);
+
+
+        @media (max-width: $tablet) {
+            width: calc(99% - 30px);
+        }
         
-        .img-container {
+    }
+        
+        &__img-container {
             display: block;
-            height: 200px;
             overflow: hidden;
             width: 100%;
+
+            img {
+                width: 100%;   
+            }
+            
+            @media (max-width: $tablet) {
+                height: auto;
+            }
         }
 
-        a {
+
+    
+        &__button {
             background-color: $color-01;
             border-radius: 5px;
-            color: white;
-            display: block;
-            font-size: $font-medium;
-            margin: $mt-02 auto $mb;
+            color: darkslategray;
+            display:block;
+            font-size: $font-small;
+            margin-bottom: 5px ;
+            margin-top: 1.5rem;
             padding: 4px 8px;
             text-align: center;
             text-decoration: none;
         }
-    }
-
 }

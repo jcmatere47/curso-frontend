@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   border: 0;
   margin: 0;
@@ -13,6 +14,7 @@ p {
   display: block;
 }
 
+article,
 header,
 section,
 footer {
@@ -28,9 +30,14 @@ section {
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 85.7142857143%;
 }
 
+@media (max-width: 1199px) {
+  .container {
+    max-width: 21.4285714286%;
+  }
+}
 img {
   width: 100%;
   height: auto;
@@ -66,82 +73,161 @@ h3 {
   font-size: 1.6rem;
 }
 
-header,
-footer {
+header {
   background-color: #ddd;
 }
 
+footer {
+  background-color: #444;
+}
+
 .blocks {
+  /*
+
+  BEM CSS
+  -BLOCK
+  -ELEMENT
+  -MODIFIER
+
+  - Padrão do objeto / Design Patterns
+
+  Exemplo: 
+  .cars__title
+  .cars__list
+  .cars__item
+
+  */
   padding: 3rem 0;
 }
-.blocks h2 {
+.blocks__title {
   color: #ff5;
 }
-.blocks ul {
+.blocks__list {
   list-style-type: none;
   font-size: 1.2rem;
-  display: flex;
-  justify-content: space-between;
-  height: 250px;
+  display: block;
+  float: left;
+  margin: 0 auto;
+  height: 1.4rem auto;
   padding: 1rem 0;
   width: 100%;
 }
-.blocks li {
+.blocks__item {
   color: #999;
   display: block;
   margin: 1.4rem auto;
-  width: 30%;
+  width: calc(33% - 15px);
 }
-.blocks li .img-container {
+@media (max-width: 1199px) {
+  .blocks__item {
+    width: calc(99% - 30px);
+  }
+}
+.blocks__img-container {
   display: block;
-  height: 200px;
   overflow: hidden;
   width: 100%;
 }
-.blocks li a {
+.blocks__img-container img {
+  width: 100%;
+}
+@media (max-width: 1199px) {
+  .blocks__img-container {
+    height: auto;
+  }
+}
+.blocks__button {
   background-color: #ff5;
   border-radius: 5px;
-  color: white;
+  color: darkslategray;
   display: block;
-  font-size: 2rem;
-  margin: 3rem auto 1.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  margin-top: 1.5rem;
   padding: 4px 8px;
   text-align: center;
   text-decoration: none;
 }
 
-.cars h2 {
+.cars__item {
+  border: 1px solid #ff0;
+  background-color: #ddd;
+  color: #222;
+  display: block;
+  float: left;
+  width: calc(33.3333% - 1.4rem);
+  box-sizing: border-box;
+}
+.cars__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 1199px) {
+  .cars__item {
+    width: 100%;
+  }
+}
+
+.cars__img-container {
+  display: block;
+  overflow: hidden;
+}
+.cars__img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cars__title {
   color: #999;
 }
-.cars li {
+.cars__item {
+  border: 1px solid #ff0;
+  background-color: #ddd;
   color: #222;
+  display: block;
+  float: left;
+  height: auto;
+  justify-content: center;
+  align-items: baseline;
+  flex-flow: column;
 }
-.cars li a {
+.cars__item--destack {
+  border: 1px solid #ff5;
+  background-color: #222;
+}
+.cars__item__button {
+  align-self: auto;
   background-color: #444;
+}
+.cars img {
+  width: 100%;
+  height: auto;
 }
 
 .destack {
   background-color: #222;
   padding: 1.4rem;
 }
-.destack h1 {
+.destack__title {
   color: #f00;
   float: left;
   font-size: 3rem;
   margin-top: 0;
 }
-.destack h2 {
+.destack__subtitle {
   float: left;
   font-size: 1.2rem;
   margin-left: 1.4rem;
   margin-top: 1.5rem;
 }
-.destack img {
+.destack__image {
   width: 100%;
   height: auto;
   margin: 1.4rem auto;
 }
-.destack p {
+.destack__description {
   font-size: 1.6rem;
   color: #fff;
   padding: 2rem 0;

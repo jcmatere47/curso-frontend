@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 * {
     border: 0;
     margin: 0;
@@ -13,6 +15,7 @@ p {
     display: block;
 }
 
+article,
 header,
 section,
 footer {
@@ -28,7 +31,13 @@ section {
 
 .container {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: math.div(1200, 1400) * 100%;
+}
+
+@media (max-width:1199px) {
+    .container {
+        max-width: math.div(300, 1400) * 100%;
+    }
 }
 
 img {
@@ -66,7 +75,11 @@ h3 {
     font-size: $font-normal;
 }
 
-header,
+header {
+    background-color: $bg-color;
+}
+
+
 footer {
-    background-color: $bg-color
+    background-color: #444
 }

@@ -1,12 +1,68 @@
+
+@mixin theme($theme: $color-01, $bg: $color-04 ) {
+    border: 1px solid $theme;
+    background-color: $bg;
+}
+
+
+.cars__item {
+    @include theme($theme: #ff0, $bg: $bg-color);
+    color: $color-04;
+    display: block;
+    float: left;
+    width: calc(33.3333% - #{$space-default}); // 3 colunas equitativas
+    box-sizing: border-box; // Inclui borda e padding na largura total
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    @media (max-width: $tablet) {
+        width: 100%; // Largura total em telas menores
+    }
+}
+
+.cars__img-container {
+    display: block;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
 .cars {
-    h2 {
+  
+    &__title {
         color: $color-02;
     }
-    li {
-        color: $color-04;
 
-        a {
+
+    &__item{
+        @include theme($theme: #ff0, $bg: $bg-color);
+        color: $color-04;
+        display: block;
+        float: left;
+        height: auto;
+        justify-content: center;
+        align-items: baseline;
+        flex-flow:column;
+
+        &--destack {
+            @include theme;
+        }
+
+        &__button{
+            align-self: auto;
             background-color: $color-default;
         }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
     }
 }
